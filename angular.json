@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/Build/UnityLoader.js"
+            ]
           },
           "configurations": {
             "production": {
