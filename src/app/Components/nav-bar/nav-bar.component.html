@@ -1,1 +1,6 @@
-<p>nav-bar works!</p>
+<div class="nav-bar">
+    <div class="nav-bar-buttons">
+        <a routerLink="home" class="nav-bar-button" [ngClass]= "{'current': urlCheck === 'home'}">Home</a>
+        <a routerLink="second-page" class="nav-bar-button" [ngClass]= "{'current': urlCheck === 'second-page'}">Second Page</a>
+    </div>
+</div>

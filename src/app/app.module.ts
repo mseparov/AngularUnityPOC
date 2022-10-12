@@ -23,7 +23,7 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: 'secondPage', component: SecondPageComponent },
+      { path: 'second-page', component: SecondPageComponent },
     ])
   ],
   providers: [],

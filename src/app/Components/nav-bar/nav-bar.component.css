@@ -1,0 +1,73 @@
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    z-index:99;
+    margin: auto;
+    overflow:visible;
+    width: 100vw;
+    height: 40px;
+    background: linear-gradient(-45deg, #4f3ee9, #873beb);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:99;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.nav-bar-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    padding: 5px 13px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    width: 8vw;
+    border: none;
+  }
+
+.nav-bar-button:hover {
+    background: rgb(231, 236, 240);
+    color: #57636d;
+    text-decoration: none;
+}
+
+
+.nav-bar-buttons{
+    display: flex;
+
+    justify-content: center;
+}
+
+.current{
+  background: rgb(136, 112, 190);
+  color: white;
+}
+
+.current:hover{
+background: rgb(118, 73, 148);
+color: white;
+}
