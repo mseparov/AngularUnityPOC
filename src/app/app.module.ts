@@ -4,16 +4,18 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UnityComponent } from './unity/unity.component';
-import { HomeComponent } from './home/home.component';
-import { SecondPageComponent } from './second-page/second-page.component';
+import { UnityComponent } from './Components/unity/unity.component';
+import { HomeComponent } from './Components/home/home.component';
+import { SecondPageComponent } from './Components/second-page/second-page.component';
+import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UnityComponent,
     HomeComponent,
-    SecondPageComponent
+    SecondPageComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
