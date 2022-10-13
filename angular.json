@@ -23,10 +23,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/Build/TemplateData/style.css"
             ],
             "scripts": [
-              "src/assets/Build/UnityLoader.js"
+              "src/assets/Build/Build/Build.loader.js"
             ]
           },
           "configurations": {
