@@ -79,8 +79,8 @@ export class UnityComponent implements OnInit
     } else {
       // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-      canvas.style.width = "960px";
-      canvas.style.height = "600px";
+      canvas.style.width = "1024px";
+      canvas.style.height = "576px";
     }
 
 
