@@ -1,0 +1,19 @@
+<mat-drawer-container class="container" autosize>
+    
+    <mat-drawer #drawer class="sidenav" mode="side" position="end">
+    
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+          </button>
+      <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+    
+    </mat-drawer>
+  
+    
+    <div class="sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+
+</mat-drawer-container>
