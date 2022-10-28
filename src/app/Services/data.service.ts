@@ -8,11 +8,16 @@ export class DataService {
 
   constructor() { }
 
-  public data = new BehaviorSubject<boolean>(false);
+  public nodeConfigDataFromUnity = new BehaviorSubject<string>("");
+  public nodeConfigSliderApply = new BehaviorSubject<any>(0);
 
-  setData(selection: any){
-    this.data.next(selection);
-}
+  setNodeConfigDataFromUnity(data: any){
+    this.nodeConfigDataFromUnity.next(data);
+  }
 
+
+  setNodeConfigSliderApply(data: any){
+    this.nodeConfigSliderApply.next(data);
+  }
 
 }

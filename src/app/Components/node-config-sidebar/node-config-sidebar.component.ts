@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../Services/data.service'
 
 @Component({
   selector: 'node-config-sidebar',
@@ -7,11 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NodeConfigSidebarComponent implements OnInit {
 
-  showFiller = false;
+  isShowing: boolean = true;
+  nodeConfigName: string = "";
 
-  constructor() { }
+
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+  
+    this.data.nodeConfigDataFromUnity.subscribe((configData)=>{
+      this.nodeConfigName = configData;
+      this.isShowing = !this.isShowing;
+
+    })
+  
   }
+  
+  sendSliderData(event:any){
+    this.data.setNodeConfigSliderApply(event);
+  }
+
 
 }

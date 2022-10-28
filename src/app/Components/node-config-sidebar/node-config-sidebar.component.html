@@ -1,19 +1,13 @@
 <mat-drawer-container class="container" autosize>
     
-    <mat-drawer #drawer class="sidenav" mode="side" position="end">
+    <mat-drawer #drawer class="sidenav" mode="side" position="end" [opened]="isShowing">
     
-        <button type="button" mat-button (click)="drawer.toggle()">
-            Toggle sidenav
-          </button>
-      <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+        <div class="node-config-name">
+            <h1>{{nodeConfigName}}</h1>
+        </div>
+
+      <mat-slider min="1" max="20" step="1" value="5" (input)="sendSliderData($event)"></mat-slider>
     
     </mat-drawer>
-  
-    
-    <div class="sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
-    </div>
 
 </mat-drawer-container>

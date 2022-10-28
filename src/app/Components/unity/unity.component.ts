@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../../Services/data.service';
+
 
 import { Router } from '@angular/router';
 
@@ -12,13 +14,12 @@ import { Router } from '@angular/router';
 export class UnityComponent implements OnInit
 {
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   gameInstance: any;
   progress = 0;
   isReady = false;
-  buttonInUnityText = "";
-
+  
 
   async ngOnInit() {
 
@@ -98,25 +99,30 @@ export class UnityComponent implements OnInit
       alert(message);
     });
 
+// ------------------------------------------------------------------------------------------
 
 
+    this.data.nodeConfigSliderApply.subscribe((sliderData)=>{
+        this.configNodesInUnity(sliderData.value);
+    });
   
+
   // get data from unity (recieve data from unity)
   //
-  (window as any).getUnityData = (textValue: string) => {
-    this.buttonInUnityText = textValue;
+  (window as any).getNodeConfigData = (config: string) => {
+    this.data.setNodeConfigDataFromUnity(config);
   }
 
-
+  
   }
 
 
   // call function in unity (send data to unity)
   //
-  callUnityFunction() {
-    this.gameInstance.SendMessage("Managers", "buttonInAngular", "Clicked a button in Angular!");
-    console.log("Clicked a button in Angular!");
-  }
 
+  configNodesInUnity(sliderValue:any) {
+    this.gameInstance.SendMessage("Managers", "applyNodeConfig", sliderValue);
+    console.log("Sending back config!");
+  }
 
 }
