@@ -6,8 +6,12 @@
             <h1>{{nodeConfigName}}</h1>
         </div>
 
-      <mat-slider min="1" max="20" step="1" value="5" (input)="sendSliderData($event)"></mat-slider>
-    
+
+        <div *ngIf="nodeConfigName == 'Data Generator Cube'">
+            <h3>Data Generator Rate Per Second:</h3>
+            <mat-slider min="0" max="16" step="1" value="5" (input)="sendSliderData($event)"></mat-slider>        
+        </div>
+        
     </mat-drawer>
 
 </mat-drawer-container>

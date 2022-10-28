@@ -19,14 +19,13 @@ export class NodeConfigSidebarComponent implements OnInit {
     this.data.nodeConfigDataFromUnity.subscribe((configData)=>{
       this.nodeConfigName = configData;
       this.isShowing = !this.isShowing;
-
     })
-  
+
   }
-  
+
+
   sendSliderData(event:any){
     this.data.setNodeConfigSliderApply(event);
   }
-
 
 }

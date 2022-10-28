@@ -113,7 +113,7 @@ export class UnityComponent implements OnInit
     this.data.setNodeConfigDataFromUnity(config);
   }
 
-  
+
   }
 
 
@@ -122,7 +122,7 @@ export class UnityComponent implements OnInit
 
   configNodesInUnity(sliderValue:any) {
     this.gameInstance.SendMessage("Managers", "applyNodeConfig", sliderValue);
-    console.log("Sending back config!");
+  // console.log("Sending back config!");
   }
 
 }

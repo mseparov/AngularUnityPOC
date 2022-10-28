@@ -16,3 +16,7 @@
   width: 100%;
   padding: 20px;
 }
+
+.mat-slider-horizontal {
+  width: 70%;
+}
