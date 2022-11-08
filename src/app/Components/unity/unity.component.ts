@@ -113,7 +113,7 @@ export class UnityComponent implements OnInit
     this.data.setNodeConfigDataFromUnity(config);
   }
 
-
+    console.log(localStorage.getItem("LHData")); // retrieve local storage data
   }
 
 
@@ -123,6 +123,10 @@ export class UnityComponent implements OnInit
   configNodesInUnity(sliderValue:any) {
     this.gameInstance.SendMessage("Managers", "applyNodeConfig", sliderValue);
   // console.log("Sending back config!");
+  }
+
+  sendUserID(userID:string){
+    this.gameInstance.SendMessage("Managers", "getUserID", userID);
   }
 
 }
