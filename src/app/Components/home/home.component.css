@@ -1,7 +1,6 @@
 .home-container{
     display: flex;
     justify-content: center;
-
 }
 
 .home-content{
@@ -11,16 +10,12 @@
     word-wrap: break-word;
 }
 
-.unity-container{
-    margin-right: auto;
+.unity-container{    
     margin-top: 0%;
-    margin-left: 1%;
 }
-
 
 .sidebar-container{
     margin-left: auto;
-    
     margin-right: 1%;
     top: 50px;
 }

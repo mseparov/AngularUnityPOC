@@ -27,7 +27,7 @@ export class UnityComponent implements OnInit
     var canvas : HTMLElement = document.querySelector("#unity-canvas") || new HTMLElement();
     var loadingBar : HTMLElement = document.querySelector("#unity-loading-bar") || new HTMLElement();
     var progressBarFull : HTMLElement = document.querySelector("#unity-progress-bar-full") || new HTMLElement();
-    var fullscreenButton : HTMLElement = document.querySelector("#unity-fullscreen-button") || new HTMLElement();
+    // var fullscreenButton : HTMLElement = document.querySelector("#unity-fullscreen-button") || new HTMLElement();
     var mobileWarning : HTMLElement = document.querySelector("#unity-mobile-warning") || new HTMLElement();
 
     function unityShowBanner(msg:any, type:any) {
@@ -92,9 +92,9 @@ export class UnityComponent implements OnInit
 
       this.gameInstance = unityInstance;
       loadingBar.style.display = "none";
-      fullscreenButton.onclick = () => {
-        unityInstance.SetFullscreen(1);
-      };
+      //fullscreenButton.onclick = () => {
+      //  unityInstance.SetFullscreen(1);
+      //};
     }).catch((message: any) => {
       alert(message);
     });
